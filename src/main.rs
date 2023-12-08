@@ -18,7 +18,7 @@ fn index() -> &'static str {
 fn rocket() -> _ {
   let dir = dotenv::var("DIR").unwrap();
   let config = rocket::Config {
-    port: 3000,
+    port: 8000,
     ..rocket::Config::debug_default()
   };
   let static_file_server = FileServer::from(dir);
